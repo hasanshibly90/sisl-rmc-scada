@@ -1,0 +1,1 @@
+v0.4.0 — Config-driven N silos + dynamic ingredients; Agg-1 tall hopper with bottom gate; mixer discharge CLOSED=plate / OPEN="||" with stream; conveyors event-filter fix; side gauges; status wiring.

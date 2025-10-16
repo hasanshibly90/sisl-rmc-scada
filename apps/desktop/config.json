@@ -1,0 +1,50 @@
+{
+  "recipe": "M25 — Standard",
+  "flags": { "draggable": true },
+
+  "layout": { "mixer_pos": [820, -120] },
+
+  "silos": [
+    { "name": "Cement Silo 1", "pos": [120, -220] },
+    { "name": "Flyash Silo 2", "pos": [120, 120] }
+  ],
+
+  "conveyor": { "diameter": 26, "drop_px": 24, "angle_deg": 45 },
+
+  "hoppers": [
+    { "name": "Aggregate 1", "capacity_kg": 1500, "pos": [-480, -420] },
+    { "name": "Aggregate 2", "capacity_kg": 1500, "pos": [-180, -420] },
+    { "name": "Aggregate 3", "capacity_kg": 1500, "pos": [120, -420] },
+    { "name": "Aggregate 4", "capacity_kg": 1500, "pos": [420, -420] }
+  ],
+
+  "collector": {
+    "name": "Collecting Hopper",
+    "capacity_kg": 6000,
+    "width_scale": 1.0,
+    "pos": [-120, -110]
+  },
+
+  "belt": { "height": 28, "offset_y": 110, "speed": 3.0, "direction": "right" },
+
+  "cement_hopper": { "name": "Cement Weigh Hopper", "capacity_kg": 500, "pos": [560, -40] },
+  "cement_silo_capacity_kg": 20000,
+  "cement_pipe": { "shape": "L", "rate_kgps": 22.5, "diameter_px": 18, "wall_px": 2 },
+
+  "water_silo": { "name": "Water Silo", "pos": [900, -280] },
+  "admixture_silo": { "name": "Admixture Silo", "pos": [900, 40] },
+
+  "water_hopper":     { "name": "Water Weigh Hopper",     "capacity_kg": 100, "pos": [1160, -120] },
+  "admixture_hopper": { "name": "Admixture Weigh Hopper", "capacity_kg": 10,  "pos": [1160, 120] },
+
+  "water_pipe":     { "shape": "L", "rate_kgps": 18.0, "diameter_px": 16, "wall_px": 2 },
+  "admixture_pipe": { "shape": "L", "rate_kgps": 3.5,  "diameter_px": 12, "wall_px": 2 },
+
+  "targets": { "Agg1": 600, "Agg2": 500, "Agg3": 400, "Agg4": 300, "Total": 1800 },
+
+  "speeds": {
+    "silo_fill_per_tick": 0.02,
+    "silo_bleed_per_tick": -0.015,
+    "mixer_arrow_deg_per_tick": 2.4
+  }
+}

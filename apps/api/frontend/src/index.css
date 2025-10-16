@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Global & Typography ---------- */
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply font-sans text-slate-900 antialiased; }
+
+  h1 { @apply text-2xl font-semibold tracking-[-0.01em]; }
+  h2 { @apply text-xl font-semibold tracking-[-0.01em]; }
+  h3 { @apply text-lg font-semibold; }
+  p  { @apply text-[0.95rem] leading-6 text-slate-800; }
+
+  /* Smooth focus ring everywhere */
+  :focus-visible {
+    outline: none !important;
+    @apply ring-2 ring-sisl-ring ring-offset-2 ring-offset-white;
+  }
+
+  /* Subtle scrollbars (Windows) */
+  *::-webkit-scrollbar { height: 10px; width: 10px; }
+  *::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+  *::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+}
+
+/* ---------- Layout ---------- */
+.app-shell { @apply grid grid-cols-[260px_1fr] min-h-screen; }
+.sidebar   { @apply bg-sisl-panel text-slate-200; }
+.topbar    { @apply h-14 flex items-center justify-between px-4 border-b border-slate-200 bg-white; }
+.nav-link  { @apply flex items-center gap-3 px-4 py-2 rounded-xl text-slate-200 hover:bg-white/10 transition; }
+.nav-link.active { @apply bg-white/15 text-white; }
+
+/* ---------- Cards & Panels ---------- */
+.card  { @apply bg-white rounded-2xl shadow-card border border-slate-200 p-5; }
+.panel { @apply bg-white rounded-2xl shadow-soft border border-slate-200 p-5; }
+
+/* ---------- Buttons ---------- */
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm
+               border border-slate-300 bg-white hover:bg-slate-100 transition; }
+.btn-primary { @apply bg-sisl-primary text-white border-transparent hover:bg-blue-700; }
+.btn-ghost   { @apply bg-transparent border-transparent hover:bg-slate-100; }
+.btn-danger  { @apply bg-red-600 text-white border-transparent hover:bg-red-700; }
+.btn:disabled { @apply opacity-60 pointer-events-none; }
+
+/* ---------- Inputs ---------- */
+.input, .select, textarea {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-[0.95rem]
+         focus:border-sisl-ring focus:ring-2 focus:ring-sisl-ring/50;
+}
+
+/* ---------- Badges ---------- */
+.badge { @apply inline-flex items-center rounded-lg px-2 py-0.5 text-xs bg-slate-100 border border-slate-200; }
+.badge-green { @apply bg-emerald-50 text-emerald-700 border-emerald-200; }
+.badge-amber { @apply bg-amber-50  text-amber-800  border-amber-200; }
+
+/* ---------- Tables ---------- */
+.table { @apply w-full border-collapse text-[0.93rem]; }
+.table thead th { @apply bg-slate-100 text-slate-700 text-left font-medium; }
+.table th, .table td { @apply border border-slate-200 px-3 py-2 align-top; }
+.table tr:hover td { @apply bg-slate-50; }
+
+/* ---------- Utility helpers ---------- */
+.kpi { @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-soft; }
